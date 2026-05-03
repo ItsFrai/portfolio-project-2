@@ -69,3 +69,4 @@ CloudWatch - monitoring and alarms
 4. Run terraform init
 5. Run terraform apply
 6. Visit Load Balancer DNS name shown in output
+ 
