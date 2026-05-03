@@ -90,6 +90,7 @@ resource "aws_instance" "web" {
               yum install -y docker
               systemctl start docker
               systemctl enable docker
+	      usermod -aG dockker ec2-user
               docker run -d -p 80:80 --restart always frai333/portfolio-app-v2:latest
               EOF
 
