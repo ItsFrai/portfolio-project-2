@@ -83,7 +83,7 @@ resource "aws_instance" "web" {
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.public[count.index].id
   vpc_security_group_ids = [aws_security_group.ec2.id]
-
+  key_name               = "my-key"
   user_data = <<-EOF
               #!/bin/bash
               yum update -y
